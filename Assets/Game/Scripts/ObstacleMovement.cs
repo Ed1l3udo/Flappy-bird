@@ -23,7 +23,7 @@ public class ObstacleMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // morte
+            collision.gameObject.GetComponent<PlayerMovement>().Die();
         }
     }
 }
