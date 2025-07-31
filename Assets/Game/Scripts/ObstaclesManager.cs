@@ -2,22 +2,16 @@ using UnityEngine;
 
 public class ObstaclesManager : MonoBehaviour
 {
-    public float respawnPosX;
     public Vector3 respawnPos;
-    private bool needToRespawn;
     public GameObject obstaclePrefab;
 
     void Start()
     {
-        respawnPos = new Vector3(respawnPosX, 0, 0);
+        Instantiate(obstaclePrefab, respawnPos, Quaternion.identity);
     }
 
-    void Update()
+    public void Respawn()
     {
-        if (needToRespawn)
-        {
-            Instantiate(obstaclePrefab, respawnPos, Quaternion.identity);
-        }
+        Instantiate(obstaclePrefab, new Vector3 (respawnPos.x , Random.Range(-2.6f, 2.6f), 0), Quaternion.identity);
     }
-    
 }
