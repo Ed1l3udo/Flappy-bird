@@ -1,5 +1,3 @@
-using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,11 +29,6 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
-    }
-
-    public void OpenSettings()
-    {
-        
     }
 
     public void Quit()
